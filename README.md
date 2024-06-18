@@ -3,6 +3,8 @@ My personal dotfiles!
 Currently includes:
 - zsh
 - alacritty
+
+
 will(hopefully) be expanded with:
 - nvim
 # install
