@@ -107,3 +107,6 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/dotFiles/zsh/.p10k.zsh.
+[[ ! -f ~/dotFiles/zsh/.p10k.zsh ]] || source ~/dotFiles/zsh/.p10k.zsh
