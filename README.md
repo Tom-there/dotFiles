@@ -12,3 +12,4 @@ will(hopefully) be expanded with:
 # install
 best use ``stow`` as a symlink farm manager. <br/>
 if you want to run a script to fully configure your environment, see my autoexec repo.
+(which is currently private as I dont have the time to maintain it. sorry :/)
