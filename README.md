@@ -4,7 +4,7 @@ My personal dotfiles!
 
 Currently includes:
 - zsh
-- alacritty
+- kitty
 - nvim
 
 will(hopefully) be expanded with:
