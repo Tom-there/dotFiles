@@ -6,6 +6,8 @@ Currently includes:
 - zsh
 - kitty
 - nvim
+- lf
+
 
 will(hopefully) be expanded with:
 - obsidian plugin for nvim
