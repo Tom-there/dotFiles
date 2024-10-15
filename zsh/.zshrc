@@ -110,3 +110,7 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 
 # To customize prompt, run `p10k configure` or edit ~/dotFiles/zsh/.p10k.zsh.
 [[ ! -f ~/dotFiles/zsh/.p10k.zsh ]] || source ~/dotFiles/zsh/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
