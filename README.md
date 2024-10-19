@@ -11,6 +11,7 @@ Currently includes:
 
 will(hopefully) be expanded with:
 - obsidian plugin for nvim
+- debugging capabilities for rust and java
 # install
 best use ``stow`` as a symlink farm manager. <br/>
 if you want to run a script to fully configure your environment, see my autoexec repo. <br/>
