@@ -30,8 +30,9 @@ return require('packer').startup(function(use)
           run = ':TSUpdate'}
   use	  'nvim-treesitter/playground'
   use 	'mbbill/undotree'
--- LSP STUFF --
+-- CODE/LSP STUFF --
   use   'williamboman/mason.nvim'
   use   'williamboman/mason-lspconfig.nvim'
   use   'neovim/nvim-lspconfig'
+  use   'nvimtools/none-ls.nvim'
 end)
