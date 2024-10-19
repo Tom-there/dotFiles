@@ -1,29 +1,30 @@
-require('neo-tree').setup{
+require("neo-tree").setup({
   event_handlers = {
     {
       event = "file_open_requested",
       handler = function()
         vim.cmd("Neotree close")
-      end}
-  }
-}
+      end,
+    },
+  },
+})
 
-vim.keymap.set('n', '<leader>e', ':Neotree filesystem toggle right<CR>')
+vim.keymap.set("n", "<leader>e", ":Neotree filesystem toggle right<CR>")
 
-require('window-picker').setup{
+require("window-picker").setup({
   filter_rules = {
     include_current_win = false,
     autoselect_one = true,
     bo = {
       filetype = {
-        'neo-tree',
-        'neo-tree-popup',
-        'notify'
+        "neo-tree",
+        "neo-tree-popup",
+        "notify",
       },
       buftype = {
-        'terminal',
-        'quickfix'
+        "terminal",
+        "quickfix",
       },
-    }
-  }
-}
+    },
+  },
+})
