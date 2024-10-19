@@ -41,11 +41,20 @@ return require("packer").startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig")
   use("nvimtools/none-ls.nvim")
-    -- AUTOCOMPLETION --
-    use("hrsh7th/nvim-cmp")
-    use("rafamadriz/friendly-snippets")
-    use("hrsh7th/cmp-nvim-lsp")
-      -- LUA --
-      use({"L3MON4D3/LuaSnip", run = "make install_jsregexp"})
-      use("saadparwaiz1/cmp_luasnip")
+  -- AUTOCOMPLETION --
+  use("hrsh7th/nvim-cmp")
+  use("rafamadriz/friendly-snippets")
+  use("hrsh7th/cmp-nvim-lsp")
+  -- AUTOCOMPLETION LUA --
+  use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" })
+  use("saadparwaiz1/cmp_luasnip")
+  -- DEBUGGERS --
+  use({ "mfussenegger/nvim-dap" })
+  use({
+    "rcarriga/nvim-dap-ui",
+    requires = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    }
+  })
 end)
