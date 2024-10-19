@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
 local null_ls = require("null-ls")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
 
@@ -8,6 +9,7 @@ mason_lspconfig.setup({
   ensure_installed = {
     "lua_ls",
     "java_language_server",
+    "rust_analyzer"
   },
 })
 
@@ -18,8 +20,15 @@ null_ls.setup({
 })
 
 -- Language specific config --
-lspconfig.lua_ls.setup({})
-lspconfig.java_language_server.setup({})
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+})
+lspconfig.java_language_server.setup({
+  capabilities = capabilities,
+})
+lspconfig.rust_analyzer.setup({
+  capabilities = capabilities,
+})
 
 -- LSP KEYBINDS --
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
