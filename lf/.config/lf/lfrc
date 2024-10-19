@@ -6,6 +6,7 @@ set scrolloff 8
 
 
 
+
 # open commands
 cmd open &{{
   case $(file --mime-type -Lb $f) in

@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias lf=lfcd
 alias n='nvim'
 alias q='exit'
 alias vault='cd "/Users/tom/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/"'
@@ -116,3 +117,11 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+
+
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
