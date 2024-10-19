@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/playground")
   use("mbbill/undotree")
+  use("lervag/vimtex")
   -- CODE/LSP STUFF --
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
