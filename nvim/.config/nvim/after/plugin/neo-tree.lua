@@ -8,15 +8,7 @@ require('neo-tree').setup{
   }
 }
 
-
-
-
-
-
-
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem toggle right<CR>')
-
-
 
 require('window-picker').setup{
   filter_rules = {
