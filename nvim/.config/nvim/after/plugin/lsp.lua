@@ -12,7 +12,6 @@ require('mason-lspconfig').setup({
 
 -- Language specific config --
 lspconfig.lua_ls.setup{}
-lspconfig.digestif.setup{}
 lspconfig.java_language_server.setup{}
 
 -- LSP KEYBINDS --
