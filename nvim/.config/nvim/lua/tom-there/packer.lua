@@ -1,7 +1,5 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
+
 
 return require('packer').startup(function(use)
 -- Packer can manage itself
@@ -23,7 +21,9 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons',
             'MunifTanjim/nui.nvim',
-            '3rd/image.nvim'} }
+            '3rd/image.nvim',
+           {'s1n7ax/nvim-window-picker',
+              version='2.*'}} }
   use	  'tpope/vim-fugitive'
 -- EDITOR STUFF --
   use{	'nvim-treesitter/nvim-treesitter',
