@@ -4,6 +4,9 @@ return require("packer").startup(function(use)
   -- Packer can manage itself
   use("wbthomason/packer.nvim")
   -- UI STUFF --
+  use({"folke/which-key.nvim",
+    requires = {"nvim-tree/nvim-web-devicons",
+  "echasnovski/mini.icons"}})
   use({
     "nvim-telescope/telescope-ui-select.nvim",
     requires = {
