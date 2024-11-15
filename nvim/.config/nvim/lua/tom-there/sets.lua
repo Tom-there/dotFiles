@@ -49,7 +49,7 @@ vim.opt.undofile = true
 
 
 -- searching
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true 
 vim.opt.incsearch = true
 
 -- leader key
