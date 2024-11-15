@@ -39,5 +39,12 @@ return {
       end,
       desc = "find content of files (telescope)",
     },
+    {
+      "<leader>fd",
+      function()
+        require("telescope.builtin").diagnostics({})
+      end,
+      desc = "show diagnostics (telescope)",
+    },
   },
 }
