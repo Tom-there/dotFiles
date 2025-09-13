@@ -1,0 +1,61 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 <file.rs> [input.file]" >&2
+  exit 1
+fi
+
+filename="$1"
+input="${2:-}"
+
+if [[ "$filename" != *.rs ]]; then
+  echo "Error: '$filename' is not a .rs file" >&2
+  exit 1
+fi
+
+if [ ! -f "$filename" ]; then
+  echo "Error: file '$filename' not found" >&2
+  exit 1
+fi
+
+comp_dir="out"
+mkdir -p "${comp_dir}"
+
+base="${filename%.rs}"
+binary="${comp_dir}/${base}"
+
+
+echo ""
+echo ""
+echo "   _____  __  __   ____    _____   _____"
+echo "  / ___/ / / / /  / __ \  / ___/  / ___/"
+echo " / /    / /_/ /  / / / / / /     (__  ) "
+echo "/_/     \__,_/  /_/ /_/ /_/     /____/  "
+echo ""                                        
+echo ""
+echo ""
+
+
+echo "compiling $filename..."
+if ! rustc "$filename" "-o" "$binary" "-A" "unused_imports" "-A" "dead_code"; then
+  echo "ERROR: compilation failed" >&2
+  exit 1
+fi
+
+
+echo "------------------------------"
+echo "--- compilation successful ---"
+echo "------------------------------"
+
+echo "running $base..."
+if [ -n "$input" ];then
+  if [ ! -f "$input" ]; then
+    echo "Error: input file '$input' not found" >&2
+    exit 1
+  fi
+  ./"$binary" < "$input"
+else
+  ./"$binary"
+fi
