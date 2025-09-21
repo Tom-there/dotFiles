@@ -6,7 +6,6 @@ require('neotree')
 require('telescope')
 
 require('autopairs')
-require('bufferline')
 
 vim.pack.add({
 	{ src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
