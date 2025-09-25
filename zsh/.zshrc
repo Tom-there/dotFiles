@@ -104,10 +104,6 @@ alias n='nvim'
 alias q='exit'
 alias vault='cd "/Users/tom/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/"'
 
-
-# DBUS config for nvim/LaTeX
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -126,4 +122,4 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
-export PATH=/Users/tom/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
