@@ -3,4 +3,8 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 })
 
-require('todo-comments').setup({})
+require('todo-comments').setup({
+	highlight = {
+		before = "fg"
+	}
+})
