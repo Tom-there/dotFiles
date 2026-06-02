@@ -7,6 +7,7 @@ Currently includes:
 - kitty
 - nvim
 - lf
+- skhd
 
 
 will(hopefully) be expanded with:
